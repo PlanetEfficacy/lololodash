@@ -1,10 +1,8 @@
 // include the Lo-Dash library
     var _ = require("lodash");
 
-    var worker = function(/* arguments */) {
+    var worker = function(words) {
         // do work; return stuff
-        var words = ['Test', 'Hello', 'World', 'Node', 'JavaScript'];
-
         var changedWords = _
           .chain(words)
           .map(function(word){ return word.toUpperCase() + "CHAINED"; })
